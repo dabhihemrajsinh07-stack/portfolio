@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+
+    <title>Dabhi Hemraj — Portfolio</title>
+    <meta
+      name="description"
+      content="A simple, clean portfolio with subtle animations and a modern interface."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="me" href="https://www.linkedin.com/in/dabhi-hemraj-704147171/" />
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true">
+      <div class="progress__bar" id="scrollProgress"></div>
+    </div>
+
+    <header class="header" id="top">
+      <div class="container header__inner">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="brand__mark" aria-hidden="true">◆</span>
+          <span class="brand__name">Dabhi Hemraj</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+            <span class="nav__toggleLine" aria-hidden="true"></span>
+            <span class="srOnly">Open menu</span>
+          </button>
+
+          <div class="nav__menu" id="navMenu">
+            <a class="nav__link" href="#about">About</a>
+            <a class="nav__link" href="#projects">Projects</a>
+            <a class="nav__link" href="#skills">Skills</a>
+            <a class="nav__link" href="#contact">Contact</a>
+            <button class="themeToggle" id="themeToggle" type="button" aria-label="Toggle theme">
+              <span class="themeToggle__icon" aria-hidden="true"></span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="kicker reveal">Aspiring Web Developer</p>
+            <h1 class="hero__title reveal">
+              I'm learning to build clean, modern websites that work beautifully.
+            </h1>
+            <p class="hero__subtitle reveal">
+              I'm <strong>Dabhi Hemraj</strong> — an aspiring web developer passionate about creating
+              responsive, user-friendly experiences. Currently learning HTML, CSS, and JavaScript.
+            </p>
+
+            <div class="hero__cta reveal">
+              <a class="btn btn--primary magnetic" href="#projects">View projects</a>
+              <a class="btn btn--ghost magnetic" href="#contact">Let’s talk</a>
+            </div>
+
+            <div class="hero__meta reveal">
+              <span class="pill">Based in Your City</span>
+              <span class="pill">Available for freelance</span>
+            </div>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <div class="orb orb--1"></div>
+            <div class="orb orb--2"></div>
+            <div class="card3d" id="tiltCard">
+              <div class="card3d__frame">
+                <div class="card3d__top">
+                  <span class="dot dot--r"></span>
+                  <span class="dot dot--y"></span>
+                  <span class="dot dot--g"></span>
+                  <span class="chip">Now</span>
+                </div>
+                <div class="card3d__content">
+                  <div class="metric">
+                    <div class="metric__label">Focus</div>
+                    <div class="metric__value">Web Development</div>
+                  </div>
+                  <div class="metric">
+                    <div class="metric__label">Stack</div>
+                    <div class="metric__value">HTML • CSS • JS</div>
+                  </div>
+                  <div class="sparkline" id="sparkline" role="img" aria-label="Animated sparkline"></div>
+                </div>
+                <div class="card3d__shine" id="cardShine"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title reveal">About</h2>
+            <p class="section__lead reveal">
+              I like simple systems, sharp typography, and interactions that feel effortless.
+            </p>
+          </div>
+
+          <div class="grid grid--2">
+            <div class="panel reveal">
+              <h3 class="panel__title">What I do</h3>
+              <p class="panel__text">
+                I design and build responsive websites and landing pages with smooth motion and
+                accessible UI patterns. I optimize for readability, speed, and clarity.
+              </p>
+              <div class="panel__list">
+                <span class="tag">Frontend development</span>
+                <span class="tag">Web development</span>
+                <span class="tag">Accessibility</span>
+                <span class="tag">Performance</span>
+              </div>
+            </div>
+
+            <div class="panel reveal">
+              <h3 class="panel__title">Highlights</h3>
+              <ul class="bullets">
+                <li>Crafted clean interfaces for products and personal brands.</li>
+                <li>Built components with modern CSS and subtle motion.</li>
+                <li>Delivered fast pages with good Lighthouse scores.</li>
+              </ul>
+              <div class="panel__actions">
+                <a class="textLink magnetic" href="#contact">Get in touch</a>
+                <a class="textLink magnetic" href="#" id="downloadResume">Download resume</a>
+              </div>
+              <p class="muted small">
+                Tip: replace the resume link with your PDF (e.g. `assets/DabhiHemraj-Resume.pdf`).
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title reveal">Projects</h2>
+            <p class="section__lead reveal">A few things I’ve built recently.</p>
+          </div>
+
+          <div class="projects">
+            <article class="projectCard reveal">
+              <div class="projectCard__top">
+                <h3 class="projectCard__title">Portfolio</h3>
+                <span class="badge">Featured</span>
+              </div>
+              <p class="projectCard__desc">
+                My personal portfolio: responsive layout, theme toggle, scroll progress, and subtle
+                motion for a polished first impression.
+              </p>
+              <div class="projectCard__stack">
+                <span class="tag tag--soft">HTML</span>
+                <span class="tag tag--soft">CSS</span>
+                <span class="tag tag--soft">JS</span>
+              </div>
+              <div class="projectCard__links">
+                <a class="btn btn--small btn--ghost magnetic" href="https://portfolio-dabhi.netlify.app/">Live</a>
+                <a
+                  class="btn btn--small btn--ghost magnetic"
+                  href="/_source-zips/portfolio-code.zip"
+                  download="portfolio-source.zip"
+                >
+                  Code
+                </a>
+              </div>
+              <div class="projectCard__hover" aria-hidden="true"></div>
+            </article>
+
+            <article class="projectCard reveal">
+              <div class="projectCard__top">
+                <h3 class="projectCard__title">Shopify Store</h3>
+                <span class="badge badge--quiet">E‑commerce</span>
+              </div>
+              <p class="projectCard__desc">
+                A complete Shopify theme with custom storefront design, product collections, cart functionality,
+                and optimized checkout experience built with Liquid and modern web technologies.
+              </p>
+              <div class="projectCard__stack">
+                <span class="tag tag--soft">Shopify</span>
+                <span class="tag tag--soft">Liquid</span>
+                <span class="tag tag--soft">JavaScript</span>
+              </div>
+              <div class="projectCard__links">
+                <a class="btn btn--small btn--ghost magnetic" href="https://shopify-store-dabhi.netlify.app/">Live</a>
+                <a
+                  class="btn btn--small btn--ghost magnetic"
+                  href="/_source-zips/shopify-store-code.zip"
+                  download="shopify-store-source.zip"
+                >
+                  Code
+                </a>
+              </div>
+              <div class="projectCard__hover" aria-hidden="true"></div>
+            </article>
+
+            <article class="projectCard reveal">
+              <div class="projectCard__top">
+                <h3 class="projectCard__title">Temple donation</h3>
+                <span class="badge badge--quiet">Community</span>
+              </div>
+              <p class="projectCard__desc">
+                A donation-focused site for a temple: simple giving flows, trust-forward copy, and
+                layouts that work well for visitors on any device.
+              </p>
+              <div class="projectCard__stack">
+                <span class="tag tag--soft">Donations</span>
+                <span class="tag tag--soft">Forms</span>
+                <span class="tag tag--soft">Accessible</span>
+              </div>
+              <div class="projectCard__links">
+                <a class="btn btn--small btn--ghost magnetic" href="https://donation-goga-maharaj.netlify.app/">Live</a>
+                <a
+                  class="btn btn--small btn--ghost magnetic"
+                  href="/_source-zips/temple-donation-code.zip"
+                  download="temple-donation-source.zip"
+                >
+                  Code
+                </a>
+              </div>
+              <div class="projectCard__hover" aria-hidden="true"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title reveal">Skills</h2>
+            <p class="section__lead reveal">Technologies I'm currently learning.</p>
+          </div>
+
+          <div class="skillGrid">
+            <div class="skill reveal">
+              <div class="skill__label">HTML</div>
+              <div class="meter" role="progressbar" aria-label="HTML proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="92">
+                <span class="meter__bar" style="--value: 92%"></span>
+              </div>
+            </div>
+            <div class="skill reveal">
+              <div class="skill__label">CSS</div>
+              <div class="meter" role="progressbar" aria-label="CSS proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90">
+                <span class="meter__bar" style="--value: 90%"></span>
+              </div>
+            </div>
+            <div class="skill reveal">
+              <div class="skill__label">JavaScript</div>
+              <div class="meter" role="progressbar" aria-label="JavaScript proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="82">
+                <span class="meter__bar" style="--value: 82%"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--cta" id="contact">
+        <div class="container">
+          <div class="cta reveal">
+            <div class="cta__copy">
+              <h2 class="cta__title">Let’s build something clean.</h2>
+              <p class="cta__text">
+                I'm currently learning and building projects to grow my skills. 
+                If you'd like to connect, collaborate, or have advice for a beginner developer, I'd love to hear from you!
+              </p>
+              <div class="cta__links">
+                <a class="btn btn--primary magnetic" href="mailto:you@email.com">you@email.com</a>
+                <a
+                  class="btn btn--ghost magnetic"
+                  href="https://www.linkedin.com/in/dabhi-hemraj-704147171/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-social="linkedin"
+                  >LinkedIn</a>
+                <a
+                  class="btn btn--ghost magnetic"
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-social="github"
+                  >GitHub</a>
+              </div>
+            </div>
+
+            <form class="form reveal" id="contactForm">
+              <label class="field">
+                <span class="field__label">Name</span>
+                <input class="field__input" name="name" autocomplete="name" required placeholder="Your name" />
+              </label>
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input class="field__input" name="email" type="email" autocomplete="email" required placeholder="you@email.com" />
+              </label>
+              <label class="field">
+                <span class="field__label">Message</span>
+                <textarea class="field__input field__input--area" name="message" required placeholder="Tell me about your project..."></textarea>
+              </label>
+              <button class="btn btn--primary magnetic" type="submit">Send</button>
+              <p class="muted small" id="formNote">
+                I'm always excited to connect with fellow developers and learn from the community.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="muted">© <span id="year"></span> Dabhi Hemraj. Built with care.</p>
+        <div class="footer__links">
+          <a
+            class="textLink magnetic"
+            href="https://www.linkedin.com/in/dabhi-hemraj-704147171/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-social="linkedin"
+            >LinkedIn</a>
+          <a
+            class="textLink magnetic"
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-social="github"
+            >GitHub</a>
+          <a class="textLink magnetic" href="#top">Back to top</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/main.js" defer></script>
+  </body>
+</html>
